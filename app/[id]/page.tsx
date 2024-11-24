@@ -5,7 +5,7 @@ interface Params {
   id: string;
 }
 
-const StaticPage = async ({ params }: { params: Params }) => {
+const StaticPage = async ({ params }: { params: Promise<Params> }) => {
   const { id } = await params;
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getDataById?id=${id}`
