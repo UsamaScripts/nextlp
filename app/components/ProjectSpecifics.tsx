@@ -13,8 +13,7 @@ function ProjectSpecifics() {
         <Image
           src="/constraction_image.png"
           alt="Licensed Icon"
-          layout="responsive"
-          width={100}
+          width={2400}
           height={100}
           className="object-cover"
         />
@@ -60,8 +59,7 @@ function ProjectSpecifics() {
         <Image
           src="/phase_1.png"
           alt="Licensed Icon"
-          layout="responsive"
-          width={100}
+          width={2400}
           height={100}
           className="object-cover"
         />
@@ -138,8 +136,7 @@ function ProjectSpecifics() {
         <Image
           src="/phase_2.png"
           alt="Licensed Icon"
-          layout="responsive"
-          width={100}
+          width={2400}
           height={100}
           className="object-cover"
         />
@@ -178,8 +175,7 @@ function ProjectSpecifics() {
         <Image
           src="/phase_3.png"
           alt="Licensed Icon"
-          layout="responsive"
-          width={100}
+          width={2400}
           height={100}
           className="object-cover"
         />
@@ -268,9 +264,8 @@ function ProjectSpecifics() {
         <Image
           src="/phase_4.png"
           alt="Licensed Icon"
-          layout="responsive"
-          width={100}
-          height={100}
+          width={2400}
+          height={2400}
           className="object-cover"
         />
       </div>

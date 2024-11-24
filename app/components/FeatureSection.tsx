@@ -60,8 +60,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ state, county }) => {
                 <Image
                   src={feature.image}
                   alt={feature.imageAlt}
-                  layout="responsive"
-                  width={100}
+                  width={2400}
                   height={78}
                   className="object-cover"
                 />
@@ -78,21 +77,21 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ state, county }) => {
       </div>
       <div className="flex items-center justify-center py-24 font-work">
         <div className="w-full max-w-3xl">
-          <h2 className="text-2xl md:text-4xl text-center font-light px-8">
-            {`${state}'s `}
-            <span className="font-bold">
-              top choice in bathroom remodeling{" "}
-            </span>
-            for the past 10 years.
-          </h2>
+          {state ? (
+            <h2 className="text-2xl md:text-4xl text-center font-light px-8">
+              {`${state}'s `}
+              <span className="font-bold">
+                top choice in bathroom remodeling
+              </span>
+            </h2>
+          ) : null}
         </div>
       </div>
       <div>
         <Image
           src="/image_section_last.png"
           alt="Licensed Icon"
-          layout="responsive"
-          width={100}
+          width={2400}
           height={425}
           className="object-cover"
         />

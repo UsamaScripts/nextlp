@@ -74,8 +74,7 @@ function ProjectDetails() {
         <Image
           src="/ProFunnelAI_Render-7.jpg"
           alt="Licensed Icon"
-          layout="responsive"
-          width={100}
+          width={2400}
           height={100}
           className="object-cover"
         />

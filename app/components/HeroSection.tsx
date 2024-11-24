@@ -34,8 +34,7 @@ const HeroSection: React.FC = () => {
         <Image
           src="/image1.png"
           alt="First Image"
-          layout="responsive"
-          width={100}
+          width={2400}
           height={40}
           className="object-cover"
         />

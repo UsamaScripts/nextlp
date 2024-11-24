@@ -26,8 +26,7 @@ const BathGallery: React.FC = () => {
               <Image
                 src={image.src}
                 alt={image.alt}
-                layout="responsive"
-                width={100}
+                width={2400}
                 height={100}
                 className="object-cover"
               />

@@ -25,8 +25,10 @@ export default {
         investmentHero: "#f8f8f8",
         invoiceBG: "#5933aa",
         footerBG: " #393F47",
+        footerLogo: "#C2C7D1",
         footerText: " #C2E4BA",
         buttonBook: "#F2C94C",
+        footerlogotext: "#DAF1D6",
       },
       height: {
         "100": "436px",

@@ -27,12 +27,28 @@ function Footer() {
                 clients— with no extra work for you.
               </p>
               <div className="flex gap-2">
-                <div className="flex border border-footerText gap-2 rounded-xl mt-6 px-2">
-                  <p>✅</p>
+                <div className="flex items-center border border-footerText gap-2 rounded-xl mt-6 px-2">
+                  <p>
+                    <Image
+                      priority
+                      src="/tick_mark_orange.svg"
+                      height={18}
+                      width={19}
+                      alt="Follow us on Twitter"
+                    />
+                  </p>
                   <p>Optimized For Clients</p>
                 </div>
-                <div className="flex border border-footerText rounded-xl gap-2 mt-6 px-2">
-                  <p>✅</p>
+                <div className="flex items-center border border-footerText rounded-xl gap-2 mt-6 px-2">
+                  <p>
+                    <Image
+                      priority
+                      src="/tick_mark_orange.svg"
+                      height={18}
+                      width={19}
+                      alt="Follow us on Twitter"
+                    />
+                  </p>
                   <p>Optimized For Clients</p>
                 </div>
               </div>
@@ -54,9 +70,20 @@ function Footer() {
                     width={430}
                     alt="Follow us on Twitter"
                   />
-                  <p className="text-start">Proposals That Win ✅</p>
+                  <div className="flex gap-2">
+                    <p className="text-start text-footerLogo">
+                      Proposals That Win
+                    </p>
+                    <Image
+                      priority
+                      src="/tick_mark.svg"
+                      height={18}
+                      width={18}
+                      alt="Follow us on Twitter"
+                    />
+                  </div>
                 </div>
-                <p className="text-start font-work text-xl">
+                <p className="text-start font-work text-footerlogotext text-xl">
                   Let’s chat about how we can maximize your profit and convert
                   more customers.
                 </p>

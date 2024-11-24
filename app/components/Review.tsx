@@ -21,9 +21,8 @@ const Review: React.FC<ReviewProps> = ({ reviews }) => {
               <Image
                 src="/star_image.png"
                 alt="bath_image"
-                layout="responsive"
-                width={1}
-                height={1}
+                width={2400}
+                height={100}
                 className="object-cover"
               />
             </div>
@@ -39,9 +38,8 @@ const Review: React.FC<ReviewProps> = ({ reviews }) => {
                   <Image
                     src="/star_image_reviews.png"
                     alt={`Review ${index + 1} Stars`}
-                    layout="responsive"
-                    width={1}
-                    height={1}
+                    width={2400}
+                    height={100}
                     className="object-cover"
                   />
                 </div>

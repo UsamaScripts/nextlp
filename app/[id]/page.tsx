@@ -1,112 +1,55 @@
-"use client";
+import React from "react";
+import PageContent from "../components/PageContent";
 
-import React, { useState, useEffect } from "react";
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
-import Investment from "../components/Investment";
-import HeroSection from "../components/HeroSection";
-import PersonalizedMessage from "../components/PersonalizedMessage";
-import FeatureSection from "../components/FeatureSection";
-import ProjectDetails from "../components/ProjectDetails";
-import ProjectSpecifics from "../components/ProjectSpecifics";
-import BathGallery from "../components/BathGallery";
-import Review from "../components/Review";
-import NextStep from "../components/NextStep";
-import Footer from "../components/Footer";
-const DynamicPage: React.FC = () => {
+interface Params {
+  id: string;
+}
+
+const StaticPage = async ({ params }: { params: Params }) => {
+  const { id } = await params;
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getDataById?id=${id}`
+  );
+  const data = await res.json();
+  console.log(data);
+
+  const firstName = `${data.first_name || "Your"}`;
+  const lastName = `${data.last_name || "Name"}`;
+  const email = `${data.company_email || "youremail@me.com"}`;
+  const companyName = `${data.company_name || "Our Company"}`;
+  const location = {
+    state: `${data.state}`,
+    county: `${data.county}`,
+  };
   const reviewData = [
     {
-      body: "ProFunnel AI transformed my bathroom beyond my expectations!",
-      author: "John Doe",
+      body: `${data.review1_body}`,
+      author: `${data.review1_author}`,
     },
     {
-      body: "Excellent service and craftsmanship. Highly recommended!",
-      author: "Jane Smith",
+      body: `${data.review2_body}`,
+      author: `${data.review2_author}`,
     },
     {
-      body: "I love my new bathroom, it’s so elegant and modern!",
-      author: "Sarah Lee",
+      body: `${data.review3_body}`,
+      author: `${data.review3_author}`,
     },
     {
-      body: "Great experience from start to finish. Five stars!",
-      author: "Mark Johnson",
+      body: `${data.review4_body}`,
+      author: `${data.review4_author}`,
     },
   ];
 
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("introduction");
-
-  const toggleSidebar = () => {
-    setSidebarOpen(!isSidebarOpen);
-  };
-
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    section?.scrollIntoView({ behavior: "smooth" });
-    if (isSidebarOpen) setSidebarOpen(false);
-    setActiveSection(sectionId);
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "introduction",
-        "project-details",
-        "your-investment",
-        "next-steps",
-      ];
-      for (let sectionId of sections) {
-        const section = document.getElementById(sectionId);
-        const rect = section?.getBoundingClientRect();
-        if (rect && rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-          setActiveSection(sectionId);
-          break;
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <>
-      <Header toggleSidebar={toggleSidebar} />
-      <Sidebar
-        isOpen={isSidebarOpen}
-        toggleSidebar={toggleSidebar}
-        scrollToSection={scrollToSection}
-        activeSection={activeSection}
-      />
-      <main className="md:ml-72  min-h-screen">
-        <section id="introduction">
-          <HeroSection />
-          <PersonalizedMessage
-            companyName="Dream Bathrooms Co."
-            firstName="John"
-            lastName="Doe"
-            emailAddress="john.doe@dreambathrooms.com"
-          />
-          <FeatureSection state="California" county="Los Angeles County" />
-        </section>
-        <section id="project-details" className="bg-white font-open">
-          <ProjectDetails />
-          <ProjectSpecifics />
-          <BathGallery />
-          <Review reviews={reviewData} />
-        </section>
-        <Investment />
-        <section id="next-steps">
-          <NextStep
-            first_name="John"
-            last_name="Doe"
-            company_name="Dream Bathrooms Co."
-          />
-        </section>
-        <Footer />
-      </main>
-    </>
+    <PageContent
+      reviews={reviewData}
+      firstName={firstName}
+      lastName={lastName}
+      email={email}
+      companyName={companyName}
+      location={location}
+    />
   );
 };
 
-export default DynamicPage;
+export default StaticPage;
