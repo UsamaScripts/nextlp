@@ -1,6 +1,6 @@
 import { query } from "../../utils/db";
 
-export default async function handler(req, res) {
+export default async function handler(req: any, res: any) {
   console.log("Incoming request:", req.method, req.query);
 
   if (req.method !== "GET") {
