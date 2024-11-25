@@ -8,7 +8,7 @@ interface Params {
 const StaticPage = async ({ params }: { params: Promise<Params> }) => {
   const { id } = await params;
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getDataById?id=${id}`
+    `https://nextlp-muhammadusama2106s-projects.vercel.app/api/getDataById?id=${id}`
   );
   const data = await res.json();
 
