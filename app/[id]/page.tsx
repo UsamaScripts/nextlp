@@ -7,15 +7,10 @@ interface Params {
 
 const StaticPage = async ({ params }: { params: Promise<Params> }) => {
   const { id } = await params;
-  const baseUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
-
-  const res = await fetch(`${baseUrl}/api/getDataById?id=${id}`);
-  console.log(baseUrl, "base url");
-
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getDataById?id=${id}`
+  );
   const data = await res.json();
-  console.log(data);
 
   const firstName = `${data.first_name || "Your"}`;
   const lastName = `${data.last_name || "Name"}`;

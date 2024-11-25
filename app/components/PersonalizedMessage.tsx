@@ -25,7 +25,7 @@ const PersonalizedMessage: React.FC<PersonalizedMessageProps> = ({
               every home and bathroom has its own unique charm.
             </p>
             <p className="my-5 font-thin">
-              With our skilled team, we're ready to create the bathroom of your
+              With our skilled team, we are ready to create the bathroom of your
               dreams. This proposal outlines all the details from our
               consultation—covering your project’s specifics, the chosen design
               style, and a breakdown of our estimated costs.

@@ -43,7 +43,7 @@ const Review: React.FC<ReviewProps> = ({ reviews }) => {
                     className="object-cover"
                   />
                 </div>
-                <p className="italic text-lg">"{review.body}"</p>
+                <p className="italic text-lg">{review.body}</p>
                 <footer className="mt-2 text-gray-300">
                   — {review.author}
                 </footer>

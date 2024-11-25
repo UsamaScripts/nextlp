@@ -56,7 +56,7 @@ const PageContent: React.FC<PageContentProps> = ({
         "your-investment",
         "next-steps",
       ];
-      for (let sectionId of sections) {
+      for (const sectionId of sections) {
         const section = document.getElementById(sectionId);
         const rect = section?.getBoundingClientRect();
         if (rect && rect.top >= 0 && rect.top <= window.innerHeight / 2) {

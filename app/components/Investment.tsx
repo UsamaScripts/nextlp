@@ -148,7 +148,7 @@ const Investment: React.FC = () => {
                   height={15}
                   className="inline align-middle"
                 />
-                <strong className="ml-3">Tile Allowance: </strong> We're
+                <strong className="ml-3">Tile Allowance: </strong> We &apos;re
                 including a $1,000 price allowance for tiles, at $3.50 per sq.
                 ft.
               </p>
@@ -161,8 +161,8 @@ const Investment: React.FC = () => {
                   className="inline align-middle"
                 />
                 <strong className="ml-3">Shower Glass Sizing: </strong>
-                We've priced for 36-inch glass, with 48-inch adding +$1,280 if
-                needed
+                We &apos;he priced for 36-inch glass, with 48-inch adding
+                +$1,280 if needed
               </p>
               <p>
                 <Image
@@ -176,7 +176,9 @@ const Investment: React.FC = () => {
                 If required, window film installation adds +$300 for both
                 windows
               </p>
-              <p className="my-14 text-2xl text-center">✅ What's Included:</p>
+              <p className="my-14 text-2xl text-center">
+                ✅ What &apos;s reIncluded:
+              </p>
               <ul className="list-disc ml-8 font-open text-base font-thin">
                 <li>Replace the exhaust fan (Panasonic model included)</li>
                 <li>Drywall and plaster work included</li>
@@ -190,7 +192,7 @@ const Investment: React.FC = () => {
                   Finish materials provided by the owner except where noted
                 </li>
               </ul>
-              <p className="my-8 text-2xl text-center"> ❌ What's Not:</p>
+              <p className="my-8 text-2xl text-center"> ❌ What&apos;s Not:</p>
               <ul className="list-disc ml-8 font-open text-base font-thin">
                 <li>
                   Faucet and tub not included, must determine whether faucet
@@ -237,7 +239,6 @@ const Investment: React.FC = () => {
         />
       </div>
     </section>
-    
   );
 };
 

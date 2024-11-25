@@ -19,7 +19,6 @@ const sections = [
 
 const Sidebar: React.FC<SidebarProps> = ({
   isOpen,
-  toggleSidebar,
   scrollToSection,
   activeSection,
 }) => {
