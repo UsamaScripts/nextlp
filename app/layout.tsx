@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import "./fonts/dmsans.ttf";
 const work = localFont({
   src: "./fonts/WorkSans.ttf",
   variable: "--font-work",
@@ -12,7 +11,7 @@ const open = localFont({
   variable: "--font-open",
   weight: "100 200 300 400 500 600 700 800 900",
 });
-const DMsans = localFont({
+const dmsans = localFont({
   src: "./fonts/dmsans.ttf",
   variable: "--font-dmsans",
   weight: "100 200 300 400 500 600 700 800 900",
@@ -31,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${work.variable} ${open.variable} ${DMsans.variable} antialiased`}
+        className={`${work.variable} ${open.variable} ${dmsans.variable} antialiased`}
       >
         {children}
       </body>
