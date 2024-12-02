@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import "./fonts/dmsans.ttf";
 const work = localFont({
   src: "./fonts/WorkSans.ttf",
   variable: "--font-work",
@@ -14,7 +14,7 @@ const open = localFont({
 });
 const DMsans = localFont({
   src: "./fonts/dmsans.ttf",
-  variable: "--font-DMsans",
+  variable: "--font-dmsans",
   weight: "100 200 300 400 500 600 700 800 900",
 });
 
