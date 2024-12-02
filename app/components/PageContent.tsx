@@ -16,9 +16,9 @@ import Footer from "./Footer";
 
 interface PageContentProps {
   reviews: Array<{ body: string; author: string }>;
-  firstName: string;
-  lastName: string;
-  email: string;
+  // firstName: string;
+  // lastName: string;
+  // email: string;
   companyName: string;
   logoUrl: string;
   location: {
@@ -29,9 +29,9 @@ interface PageContentProps {
 
 const PageContent: React.FC<PageContentProps> = ({
   reviews,
-  firstName,
-  lastName,
-  email,
+  // firstName,
+  // lastName,
+  // email,
   companyName,
   location,
   logoUrl,
@@ -87,9 +87,9 @@ const PageContent: React.FC<PageContentProps> = ({
           <HeroSection compnayLogoUrl={logoUrl} />
           <PersonalizedMessage
             companyName={companyName}
-            firstName={firstName}
-            lastName={lastName}
-            emailAddress={email}
+            // firstName={firstName}
+            // lastName={lastName}
+            // emailAddress={email}
           />
           <FeatureSection state={location.state} county={location.county} />
         </section>
@@ -102,8 +102,8 @@ const PageContent: React.FC<PageContentProps> = ({
         <Investment />
         <section id="next-steps">
           <NextStep
-            first_name={firstName}
-            last_name={lastName}
+            // first_name={firstName}
+            // last_name={lastName}
             company_name={companyName}
           />
         </section>

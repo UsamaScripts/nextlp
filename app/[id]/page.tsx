@@ -12,9 +12,9 @@ const StaticPage = async ({ params }: { params: Promise<Params> }) => {
   );
   const data = await res.json();
 
-  const firstName = `${data.first_name || "Your"}`;
-  const lastName = `${data.last_name || "Name"}`;
-  const email = `${data.company_email || "youremail@me.com"}`;
+  // const firstName = `${data.first_name || "Your"}`;
+  // const lastName = `${data.last_name || "Name"}`;
+  // const email = `${data.company_email || "youremail@me.com"}`;
   const companyName = `${data.company_name || "Our Company"}`;
   const location = {
     state: `${data.state}`,
@@ -45,9 +45,9 @@ const StaticPage = async ({ params }: { params: Promise<Params> }) => {
   return (
     <PageContent
       reviews={reviewData}
-      firstName={firstName}
-      lastName={lastName}
-      email={email}
+      // firstName={firstName}
+      // lastName={lastName}
+      // email={email}
       companyName={companyName}
       location={location}
       logoUrl={logoUrl}
