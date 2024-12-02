@@ -8,7 +8,7 @@ interface Params {
 const StaticPage = async ({ params }: { params: Promise<Params> }) => {
   const { id } = await params;
   const res = await fetch(
-    `https://nextlp-muhammadusama2106s-projects.vercel.app/api/getDataById?id=${id}`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getDataById?id=${id}`
   );
   const data = await res.json();
 
@@ -20,6 +20,9 @@ const StaticPage = async ({ params }: { params: Promise<Params> }) => {
     state: `${data.state}`,
     county: `${data.county}`,
   };
+  const logoUrl = data.company_logo
+    ? `${data.company_logo}`
+    : "/your_company_logo.png";
   const reviewData = [
     {
       body: `${data.review1_body}`,
@@ -47,6 +50,7 @@ const StaticPage = async ({ params }: { params: Promise<Params> }) => {
       email={email}
       companyName={companyName}
       location={location}
+      logoUrl={logoUrl}
     />
   );
 };

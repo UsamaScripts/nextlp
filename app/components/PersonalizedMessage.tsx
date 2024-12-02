@@ -19,7 +19,7 @@ const PersonalizedMessage: React.FC<PersonalizedMessageProps> = ({
       <div className="flex flex-col items-center text-white px-0 sm:px-8 md:px-0 py-20 w-full max-w-4xl z-10">
         <div className="mx-6">
           <div className="px-0 sm:px-0 md:px-12 font-open">
-            <p className="text-2xl font-bold mb-5 font-work">Hi {firstName},</p>
+            <p className="text-2xl font-bold mb-5 font-work">Hi Jane,</p>
             <p className="my-5 text-base font-thin">
               At <span className="font-bold">{companyName}</span>, we believe
               every home and bathroom has its own unique charm.
@@ -45,10 +45,7 @@ const PersonalizedMessage: React.FC<PersonalizedMessageProps> = ({
               <br />
               <strong>Best Wishes,</strong>
             </p>
-            <p className="text-2xl mt-10 mb-5 font-thin">{`${firstName} ${lastName}`}</p>
-            <p>
-              {companyName} | {emailAddress}
-            </p>
+            <p className="text-lg font-light">{` — The ${companyName} Team`}</p>
           </div>
         </div>
       </div>

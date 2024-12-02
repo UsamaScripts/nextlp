@@ -42,7 +42,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ state, county }) => {
     <div className="w-full font-work">
       <div className="flex items-center justify-center px-4 sm:px-0">
         <div className="mt-12 mb-8 max-w-3xl">
-          <p className="text-lg sm:text-2xl font-light text-center leading-relaxed">
+          <p className="text-lg sm:text-2xl font-light text-center ">
             We provide <strong>{county}</strong> with exceptional service you
             can trust.
           </p>
@@ -56,12 +56,16 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ state, county }) => {
               key={index}
               className="flex flex-col items-center text-center space-y-4 px-8"
             >
-              <div className="w-16 h-20">
+              <div
+                className={`${
+                  feature.title === "Cost Effective" ? "w-20 h-20" : "w-16 h-20"
+                }`}
+              >
                 <Image
                   src={feature.image}
                   alt={feature.imageAlt}
                   width={2400}
-                  height={78}
+                  height={100}
                   className="object-cover"
                 />
               </div>

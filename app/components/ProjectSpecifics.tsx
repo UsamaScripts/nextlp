@@ -24,7 +24,7 @@ function ProjectSpecifics() {
           <div className="md:w-1/2 w-full mb-8 md:mb-0 pl-0 md:pl-10">
             <div>
               <h2 className="text-3xl font-bold">Phase 1</h2>
-              <h3 className="mt-10 text-2xl md:text-4xl text-gray-600">
+              <h3 className="mt-10 text-2xl md:text-4xl leading-normal text-gray-600 font-light">
                 Demolition
               </h3>
             </div>
@@ -70,7 +70,7 @@ function ProjectSpecifics() {
           <div className="md:w-1/2 w-full mb-8 md:mb-0 pl-0 md:pl-10">
             <div>
               <h2 className="text-3xl font-bold">Phase 2</h2>
-              <h3 className="mt-10 text-2xl md:text-4xl text-gray-600">
+              <h3 className="mt-10 text-2xl md:text-4xl leading-normal text-gray-600 font-light">
                 Rough-In Work
               </h3>
             </div>
@@ -186,7 +186,7 @@ function ProjectSpecifics() {
           <div className="md:w-1/2 w-full mb-8 md:mb-0 pl-0 md:pl-10">
             <div>
               <h2 className="text-3xl font-bold">Phase 4</h2>
-              <h3 className="mt-10 text-2xl md:text-4xl text-gray-600">
+              <h3 className="mt-10 text-2xl md:text-4xl leading-normal text-gray-600 font-light">
                 Tile & Fixture Install
               </h3>
             </div>
@@ -275,7 +275,7 @@ function ProjectSpecifics() {
           <div className="md:w-1/2 w-full mb-8 md:mb-0 pl-0 md:pl-10">
             <div>
               <h2 className="text-3xl font-bold">Phase 5</h2>
-              <h3 className="mt-10 text-2xl md:text-4xl text-gray-600">
+              <h3 className="mt-10 text-2xl md:text-4xl leading-normal text-gray-600 font-light">
                 Finishing Touches + Cleanup
               </h3>
             </div>

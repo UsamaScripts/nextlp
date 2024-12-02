@@ -6,6 +6,7 @@ interface CompanyData {
   company_name: string;
   first_name: string;
   last_name: string;
+  company_logo: string;
   company_email: string;
   phone: string;
   state: string;
@@ -38,7 +39,7 @@ export default async function handler(
 
   try {
     const data = await query(
-      'SELECT id, company_name, first_name, last_name, company_email, phone, state, county, city, service_years, review1_body, review1_author, review2_body, review2_author, review3_body, review3_author, review4_body, review4_author FROM "public"."google-places" WHERE id = $1',
+      'SELECT id, company_name, first_name, last_name, company_email, phone, state, county, city, service_years, review1_body, review1_author, review2_body, review2_author, review3_body, review3_author, review4_body, review4_author , company_logo FROM "public"."google-places" WHERE id = $1',
       [id]
     );
 

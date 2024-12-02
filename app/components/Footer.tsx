@@ -4,8 +4,10 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="bg-footer-green-gradient text-white flex flex-col justify-center items-center font-open">
-        <div className="text-center py-20 px-8 w-full max-w-3xl">
+      <div className="bg-footer-green-gradient text-white flex flex-col justify-center items-center font-DMsans">
+        <div className=" h-64 bg-footer-transparent-gradient w-full z-20 -mt-64"></div>
+
+        <div className="text-center pb-20 px-8 w-full max-w-3xl">
           <div>
             <h2 className="text-4xl mb-12">
               Ready to Transform Your Proposals?
@@ -14,20 +16,19 @@ function Footer() {
 
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             <div className="md:w-1/3">
-              <p className="text-left text-lg">
+              <p className="text-left text-lg font-DMsans">
                 Turn your estimates into
                 <strong> captivating experiences </strong> with ProFunnel.
               </p>
             </div>
-
             <div className="md:w-2/3 text-footerText">
               <p className="text-left text-lg md:text-xl border-b border-footerText pb-2">
                 ProFunnel transforms static estimates into interactive, dynamic
                 web experiences that provide the ultimate functionality to your
                 clients— with no extra work for you.
               </p>
-              <div className="flex gap-2">
-                <div className="flex items-center border border-footerText gap-2 rounded-xl mt-6 px-2">
+              <div className="flex flex-wrap sm:gap-4">
+                <div className="flex items-center border border-footerText gap-2 rounded-xl mt-6 px-2 flex-1 min-w-[200px]">
                   <p>
                     <Image
                       priority
@@ -39,7 +40,7 @@ function Footer() {
                   </p>
                   <p>Optimized For Clients</p>
                 </div>
-                <div className="flex items-center border border-footerText rounded-xl gap-2 mt-6 px-2">
+                <div className="flex items-center border border-footerText rounded-xl gap-2 mt-6 px-2 flex-1 min-w-[200px]">
                   <p>
                     <Image
                       priority
@@ -57,7 +58,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="bg-footerBG text-white flex flex-col justify-center items-center font-open">
+      <div className="bg-footerBG text-white flex flex-col justify-center items-center ">
         <div className="text-center py-20 px-8 w-full max-w-3xl">
           <div className="flex flex-col md:flex-row gap-8">
             <div className=" flex flex-col justify-start items-start w-full">
@@ -83,13 +84,13 @@ function Footer() {
                     />
                   </div>
                 </div>
-                <p className="text-start font-work text-footerlogotext text-xl">
+                <p className="text-start  text-footerlogotext text-xl">
                   Let’s chat about how we can maximize your profit and convert
                   more customers.
                 </p>
               </div>
             </div>
-            <div className="  w-full text-footerBG flex justify-center items-center ">
+            <div className=" w-full text-footerBG flex justify-center items-center ">
               <div className=" w-full">
                 <button className="bg-buttonBook py-2 px-4 text-bold rounded-3xl">
                   BOOK A FREE CONSULTATION

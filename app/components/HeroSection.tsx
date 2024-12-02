@@ -1,20 +1,23 @@
 import React from "react";
 import Image from "next/image";
-
-const HeroSection: React.FC = () => {
+type HeroSectionProps = {
+  compnayLogoUrl: string;
+};
+const HeroSection: React.FC<HeroSectionProps> = ({ compnayLogoUrl }) => {
   return (
     <>
-      <div className="relative py-16 bg-hero-section-first-image bg-cover bg-center flex flex-col items-center justify-center font-work ">
+      <div className="relative py-16 bg-hero-section-first-image bg-cover bg-center flex flex-col items-center justify-center font-work">
         <div className="absolute inset-0 bg-herosection"></div>
         <div className="relative w-full z-10 text-white text-center flex flex-col items-center">
           <div className="w-10/12 ">
             <div className="mb-6">
               <Image
-                src="/your_company_logo_transparent.png"
+                src={compnayLogoUrl}
                 width={162}
                 height={86}
                 alt="Your company logo"
                 className="mx-auto"
+                unoptimized
               />
             </div>
             <div className="mb-8 mx-auto">

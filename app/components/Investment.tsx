@@ -179,7 +179,7 @@ const Investment: React.FC = () => {
               <p className="my-14 text-2xl text-center">
                 ✅ What &apos;s reIncluded:
               </p>
-              <ul className="list-disc ml-8 font-open text-base font-thin">
+              <ul className="list-disc ml-8 font-open text-base font-light">
                 <li>Replace the exhaust fan (Panasonic model included)</li>
                 <li>Drywall and plaster work included</li>
                 <li>Painting included</li>
@@ -193,7 +193,7 @@ const Investment: React.FC = () => {
                 </li>
               </ul>
               <p className="my-8 text-2xl text-center"> ❌ What&apos;s Not:</p>
-              <ul className="list-disc ml-8 font-open text-base font-thin">
+              <ul className="list-disc ml-8 font-open text-base font-light">
                 <li>
                   Faucet and tub not included, must determine whether faucet
                   comes out of wall or floor

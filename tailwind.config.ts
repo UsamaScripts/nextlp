@@ -29,13 +29,16 @@ export default {
         footerText: " #C2E4BA",
         buttonBook: "#F2C94C",
         footerlogotext: "#DAF1D6",
+        buttonColor: "#4DCF85",
       },
       height: {
         "100": "436px",
       },
       backgroundImage: {
+        "footer-transparent-gradient":
+          "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #5CBC45 70.5%)",
         "footer-green-gradient":
-          "linear-gradient(135deg, #8CC63F 0%, #5CBC45 14.5%, #256825 100%)",
+          "linear-gradient(180deg, #5CBC45 14.5%, #256825 100%)",
         "ready-section":
           "url('https://images.pexels.com/photos/4705933/pexels-photo-4705933.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200')",
         "hero-section-google-review":
@@ -50,6 +53,7 @@ export default {
       fontFamily: {
         work: ["var(--font-work)"],
         open: ["var(--font-open)"],
+        DMsans: ["var(--font-dmsans)"],
       },
     },
   },

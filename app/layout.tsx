@@ -12,6 +12,11 @@ const open = localFont({
   variable: "--font-open",
   weight: "100 200 300 400 500 600 700 800 900",
 });
+const DMsans = localFont({
+  src: "./fonts/DMsans.ttf",
+  variable: "--font-DMsans",
+  weight: "100 200 300 400 500 600 700 800 900",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${work.variable} ${open.variable} antialiased`}>{children}</body>
+      <body
+        className={`${work.variable} ${open.variable} ${DMsans.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

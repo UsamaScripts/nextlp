@@ -20,6 +20,7 @@ interface PageContentProps {
   lastName: string;
   email: string;
   companyName: string;
+  logoUrl: string;
   location: {
     state: string;
     county: string;
@@ -33,6 +34,7 @@ const PageContent: React.FC<PageContentProps> = ({
   email,
   companyName,
   location,
+  logoUrl,
 }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("introduction");
@@ -74,6 +76,7 @@ const PageContent: React.FC<PageContentProps> = ({
     <>
       <Header toggleSidebar={toggleSidebar} />
       <Sidebar
+        compnayLogoUrl={logoUrl}
         isOpen={isSidebarOpen}
         toggleSidebar={toggleSidebar}
         scrollToSection={scrollToSection}
@@ -81,7 +84,7 @@ const PageContent: React.FC<PageContentProps> = ({
       />
       <main className="md:ml-72 min-h-screen">
         <section id="introduction">
-          <HeroSection />
+          <HeroSection compnayLogoUrl={logoUrl} />
           <PersonalizedMessage
             companyName={companyName}
             firstName={firstName}

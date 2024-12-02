@@ -8,6 +8,7 @@ type SidebarProps = {
   toggleSidebar: () => void;
   scrollToSection: (sectionId: string) => void;
   activeSection: string;
+  compnayLogoUrl: string;
 };
 
 const sections = [
@@ -21,21 +22,30 @@ const Sidebar: React.FC<SidebarProps> = ({
   isOpen,
   scrollToSection,
   activeSection,
+  compnayLogoUrl,
 }) => {
   return (
     <aside
-      className={` fixed top-0 left-0 h-full w-72 bg-[var(--sidebar-bg)] text-white z-50 transform ${
+      className={` fixed top-0 left-0 h-full w-72 bg-[var(--sidebar-bg)] text-white z-10 transform ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } md:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col items-center`}
     >
       <div className="flex flex-col items-center space-y-8 w-full">
         <div className="p-8">
-          <Image
+          {/* <Image
             src="/your_company_logo.png"
             width={300}
             height={167}
             alt="Your company logo here"
             className="mx-auto"
+          /> */}
+          <Image
+            src={compnayLogoUrl}
+            width={300}
+            height={167}
+            alt="Your company logo here"
+            className="mx-auto"
+            unoptimized
           />
         </div>
         <div className="w-full space-y-4">
