@@ -53,7 +53,7 @@ export default {
       fontFamily: {
         work: ["var(--font-work)"],
         open: ["var(--font-open)"],
-        DMsans: ["var(--font-dmsans)"],
+        // DMsans: ["var(--font-dmsans)"],
       },
     },
   },

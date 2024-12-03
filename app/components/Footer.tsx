@@ -4,7 +4,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="bg-footer-green-gradient text-white flex flex-col justify-center items-center font-DMsans">
+      <div className="bg-footer-green-gradient text-white flex flex-col justify-center items-center font-open">
         <div className=" h-64 bg-footer-transparent-gradient w-full z-20 -mt-64"></div>
 
         <div className="text-center pb-20 px-8 w-full max-w-3xl">
@@ -16,7 +16,7 @@ function Footer() {
 
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             <div className="md:w-1/3">
-              <p className="text-left text-lg font-DMsans">
+              <p className="text-left text-lg font-open">
                 Turn your estimates into
                 <strong> captivating experiences </strong> with ProFunnel.
               </p>
