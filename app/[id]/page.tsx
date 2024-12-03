@@ -7,7 +7,9 @@ interface Params {
 
 const StaticPage = async ({ params }: { params: Promise<Params> }) => {
   const { id } = await params;
-  const res = await fetch(`https://nextlp.vercel.app/api/getDataById?id=${id}`);
+  const BASEURL =
+    "https://nextlp-git-main-muhammadusama2106s-projects.vercel.app";
+  const res = await fetch(`${BASEURL}/api/getDataById?id=${id}`);
   const data = await res.json();
 
   // const firstName = `${data.first_name || "Your"}`;
