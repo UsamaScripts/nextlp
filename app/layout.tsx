@@ -12,7 +12,7 @@ const open = localFont({
   weight: "100 200 300 400 500 600 700 800 900",
 });
 const dmsans = localFont({
-  src: "./fonts/dmsans.ttf",
+  src: "../fonts/dmsans.ttf",
   variable: "--font-dmsans",
   weight: "100 200 300 400 500 600 700 800 900",
 });
