@@ -1,16 +1,10 @@
 import React from "react";
 import Image from "next/image";
 interface NextStepProps {
-  // first_name: string;
-  // last_name: string;
   company_name: string;
 }
 
-const NextStep: React.FC<NextStepProps> = ({
-  // first_name,
-  // last_name,
-  company_name,
-}) => {
+const NextStep: React.FC<NextStepProps> = ({ company_name }) => {
   return (
     <>
       {/* Header Section */}

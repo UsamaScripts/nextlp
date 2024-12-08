@@ -30,23 +30,24 @@ const Review: React.FC<ReviewProps> = ({ reviews }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {reviews.map((review, index) => (
-              <blockquote
-                key={index}
-                className="border-l-4 border-gray-400 pl-4"
-              >
-                <div className="flex items-center mb-4 w-28">
-                  <Image
-                    src="/star_image_reviews.png"
-                    alt={`Review ${index + 1} Stars`}
-                    width={2400}
-                    height={100}
-                    className="object-cover"
-                  />
+              <blockquote key={index} className="relative pl-4">
+                <div className="border-l-4 border-gray-400 ">
+                  <div className="ml-4">
+                    <div className="flex items-center mb-4 w-28">
+                      <Image
+                        src="/star_image_reviews.png"
+                        alt={`Review ${index + 1} Stars`}
+                        width={2400}
+                        height={100}
+                        className="object-cover"
+                      />
+                    </div>
+                    <p className="italic text-lg">{review.body}</p>
+                    <footer className="mt-2 text-gray-300">
+                      — {review.author}
+                    </footer>
+                  </div>
                 </div>
-                <p className="italic text-lg">{review.body}</p>
-                <footer className="mt-2 text-gray-300">
-                  — {review.author}
-                </footer>
               </blockquote>
             ))}
           </div>

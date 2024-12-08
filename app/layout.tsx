@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
+
 const work = localFont({
   src: "./fonts/WorkSans.ttf",
   variable: "--font-work",
@@ -11,11 +13,12 @@ const open = localFont({
   variable: "--font-open",
   weight: "100 200 300 400 500 600 700 800 900",
 });
-// const dmsans = localFont({
-//   src: "./fonts/dmsans.ttf",
-//   variable: "--font-dmsans",
-//   weight: "100 200 300 400 500 600 700 800 900",
-// });
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${work.variable} ${open.variable} antialiased`}>
+      <body
+        className={`${work.variable} ${open.variable} ${dmSans.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

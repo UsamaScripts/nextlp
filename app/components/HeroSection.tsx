@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 type HeroSectionProps = {
-  compnayLogoUrl: string;
+  companyLogoUrlHero: string;
 };
-const HeroSection: React.FC<HeroSectionProps> = ({ compnayLogoUrl }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ companyLogoUrlHero }) => {
   return (
     <>
       <div className="relative py-16 bg-hero-section-first-image bg-cover bg-center flex flex-col items-center justify-center font-work">
@@ -12,7 +12,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ compnayLogoUrl }) => {
           <div className="w-10/12 ">
             <div className="mb-6">
               <Image
-                src={compnayLogoUrl}
+                src={companyLogoUrlHero}
                 width={162}
                 height={86}
                 alt="Your company logo"

@@ -11,6 +11,9 @@ export default {
       fontSize: {
         "2xl": "1.65rem",
         "5xl": "2.65rem",
+        "6xl": "3.1rem",
+        "7xl": "3.6rem",
+        "8xl": "1.37rem",
       },
       width: {
         "max-w-4xl": "740px",
@@ -30,6 +33,9 @@ export default {
         buttonBook: "#F2C94C",
         footerlogotext: "#DAF1D6",
         buttonColor: "#4DCF85",
+        btcolor: "#2B3137",
+        contactUsColor: "#A0A6B1",
+        footerBorder: "#6C7282",
       },
       height: {
         "100": "436px",
@@ -41,8 +47,7 @@ export default {
           "linear-gradient(180deg, #5CBC45 14.5%, #256825 100%)",
         "ready-section":
           "url('https://images.pexels.com/photos/4705933/pexels-photo-4705933.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200')",
-        "hero-section-google-review":
-          "url('https://images.pexels.com/photos/2117938/pexels-photo-2117938.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200')",
+        "hero-section-google-review": "url('/review_background.jpg')",
         "hero-section-first-image":
           "url('https://images.pexels.com/photos/3616764/pexels-photo-3616764.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200')",
         "hero-section-second-image":
@@ -53,7 +58,7 @@ export default {
       fontFamily: {
         work: ["var(--font-work)"],
         open: ["var(--font-open)"],
-        // DMsans: ["var(--font-dmsans)"],
+        DMsans: ["var(--font-dm-sans)"],
       },
     },
   },

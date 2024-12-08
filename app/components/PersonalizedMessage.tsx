@@ -2,16 +2,10 @@ import React from "react";
 
 interface PersonalizedMessageProps {
   companyName: string;
-  // firstName: string;
-  // lastName: string;
-  // emailAddress: string;
 }
 
 const PersonalizedMessage: React.FC<PersonalizedMessageProps> = ({
   companyName,
-  // firstName,
-  // lastName,
-  // emailAddress,
 }) => {
   return (
     <div className="relative w-full bg-hero-section-second-image bg-cover  flex items-center justify-center">

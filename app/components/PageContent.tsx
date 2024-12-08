@@ -16,25 +16,21 @@ import Footer from "./Footer";
 
 interface PageContentProps {
   reviews: Array<{ body: string; author: string }>;
-  // firstName: string;
-  // lastName: string;
-  // email: string;
   companyName: string;
   logoUrl: string;
+  LogoUrlHero: string;
   location: {
-    state: string;
+    countyState: string;
     county: string;
   };
 }
 
 const PageContent: React.FC<PageContentProps> = ({
   reviews,
-  // firstName,
-  // lastName,
-  // email,
   companyName,
   location,
   logoUrl,
+  LogoUrlHero,
 }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("introduction");
@@ -84,14 +80,12 @@ const PageContent: React.FC<PageContentProps> = ({
       />
       <main className="md:ml-72 min-h-screen">
         <section id="introduction">
-          <HeroSection compnayLogoUrl={logoUrl} />
-          <PersonalizedMessage
-            companyName={companyName}
-            // firstName={firstName}
-            // lastName={lastName}
-            // emailAddress={email}
+          <HeroSection companyLogoUrlHero={LogoUrlHero} />
+          <PersonalizedMessage companyName={companyName} />
+          <FeatureSection
+            countyState={location.countyState}
+            county={location.county}
           />
-          <FeatureSection state={location.state} county={location.county} />
         </section>
         <section id="project-details" className="bg-white font-open">
           <ProjectDetails />
@@ -101,11 +95,7 @@ const PageContent: React.FC<PageContentProps> = ({
         </section>
         <Investment />
         <section id="next-steps">
-          <NextStep
-            // first_name={firstName}
-            // last_name={lastName}
-            company_name={companyName}
-          />
+          <NextStep company_name={companyName} />
         </section>
         <Footer />
       </main>

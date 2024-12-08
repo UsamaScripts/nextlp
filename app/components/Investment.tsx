@@ -102,7 +102,6 @@ const Investment: React.FC = () => {
             </div>
           </div>
 
-          {/* Total Summary Section */}
           <div className="mt-8  p-6 border rounded ">
             <div className="flex justify-between text-sm mb-2">
               <p>One-off Total</p>
@@ -177,7 +176,7 @@ const Investment: React.FC = () => {
                 windows
               </p>
               <p className="my-14 text-2xl text-center">
-                ✅ What &apos;s reIncluded:
+                ✅ What&apos;s Included:
               </p>
               <ul className="list-disc ml-8 font-open text-base font-light">
                 <li>Replace the exhaust fan (Panasonic model included)</li>

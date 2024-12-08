@@ -2,11 +2,14 @@ import React from "react";
 import Image from "next/image";
 
 interface FeatureSectionProps {
-  state: string;
+  countyState: string;
   county: string;
 }
 
-const FeatureSection: React.FC<FeatureSectionProps> = ({ state, county }) => {
+const FeatureSection: React.FC<FeatureSectionProps> = ({
+  countyState,
+  county,
+}) => {
   const featuresData = [
     {
       title: "Experienced",
@@ -79,18 +82,25 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ state, county }) => {
           ))}
         </div>
       </div>
-      <div className="flex items-center justify-center py-24 font-work">
+
+      <div
+        className={`flex  items-center justify-center py-24 font-work ${
+          !countyState || countyState.trim() === "null" ? "hidden" : ""
+        }
+        }`}
+      >
         <div className="w-full max-w-3xl">
-          {state ? (
+          <div className="w-full max-w-3xl">
             <h2 className="text-2xl md:text-4xl text-center font-light px-8">
-              {`${state}'s `}
+              {`${countyState}'s `}
               <span className="font-bold">
                 top choice in bathroom remodeling
               </span>
             </h2>
-          ) : null}
+          </div>
         </div>
       </div>
+
       <div>
         <Image
           src="/image_section_last.png"
